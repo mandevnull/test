@@ -3,8 +3,14 @@ pipeline {
     stages {
       stage('Build & Test') {
         steps {
-           sh 'echo hola'
+           sh 'echo hola > hola.txt'
+           sh 'ls'
               }
       }
+        stage ('check') {
+            steps {
+             sh 'ls'
+            }
+        }
     }
  }
