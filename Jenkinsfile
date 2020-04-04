@@ -10,6 +10,7 @@ pipeline {
       }
         stage ('check') {   agent { label 'aws2' }
             steps {
+                stash "first-stash"
              sh 'ls'
             }
         }
