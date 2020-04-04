@@ -1,13 +1,13 @@
 pipeline {
-    agent { label 'aws' }
+    agent none
     stages {
-      stage('Build & Test') {
+      stage('Build & Test') {  agent { label aws }
         steps {
            sh 'echo hola > hola.txt'
            sh 'ls'
               }
       }
-        stage ('check') {
+        stage ('check') {   agent { label aws2 }
             steps {
              sh 'ls'
             }
