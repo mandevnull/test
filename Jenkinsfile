@@ -5,6 +5,7 @@ pipeline {
         steps {
            sh 'echo hola > hola.txt'
            sh 'ls'
+            stash name: "first-stash", includes: "*.txt"
               }
       }
         stage ('check') {   agent { label 'aws2' }
