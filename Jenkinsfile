@@ -1,2 +1,2 @@
 @Library('pipeline-library') _ 
-pipeline()
+pipeline-test()
