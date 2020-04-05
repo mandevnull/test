@@ -1,2 +1,2 @@
 @Library('pipeline-library') _ 
-call()
+pipeline()
